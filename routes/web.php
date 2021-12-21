@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VeiculosController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,11 @@ use App\Http\Controllers\VeiculosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/veiculos');
 });
 
-Route::resource('/veiculos', VeiculosController::class);
+Route::resource('/veiculos', VeiculosController::class)->middleware('auth');
+Route::resource('/usuarios', UsuariosController::class)->middleware('auth');
 
 Auth::routes();
 
