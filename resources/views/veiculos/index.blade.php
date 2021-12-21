@@ -28,6 +28,7 @@
                             <td class="">
                               <a href="/veiculos/{{$veiculo->id}}" class="btn btn-primary">Exibir</a>
                               <a href="/veiculos/{{$veiculo->id}}/edit" class="btn btn-primary">Editar</a>
+                              <a href="/veiculos/{{$veiculo->id}}/bookings" class="btn btn-primary">Reservas</a>
                             </td>
                           </tr>
                         @endforeach

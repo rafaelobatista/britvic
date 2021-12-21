@@ -15,4 +15,9 @@ class Veiculo extends Model
         'ano',
         'placa'
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany('App\Models\Booking');
+    }
 }

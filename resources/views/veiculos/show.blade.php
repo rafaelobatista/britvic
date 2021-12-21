@@ -27,7 +27,8 @@
                     		<label for="placa">Placa</label>
                     		<input type="text" name="placa" id="placa" placeholder="Placa" class="form-control" value="{{$veiculo->placa}}" readonly>
                     	</div>
-                    	<a href="/veiculos/{{$veiculo->id}}/edit" class="btn btn-primary">Editar</a>
+                    	<a href="/veiculos/{{$veiculo->id}}/bookings" class="btn btn-primary">Reservas</a>
+                        <a href="/veiculos/{{$veiculo->id}}/edit" class="btn btn-primary">Editar</a>
                         <a href="#!" id="deletar" class="btn btn-primary">Deletar</a>
                     </form>
                 </div>
