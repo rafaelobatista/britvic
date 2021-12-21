@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 class UsuariosController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Lista todos os usuários.
      *
      * @return \Illuminate\Http\Response
      */
@@ -21,17 +21,17 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Exibe o formulário para criação de usuários
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return view('usuarios.create');
+        return view('usuarios.form');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Armazena um novo usuário.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -49,7 +49,7 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Exibe um usuário.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -60,7 +60,7 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Exibe o formulário para editar um usuário.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -71,7 +71,7 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Atualiza um usuário.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -90,7 +90,7 @@ class UsuariosController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Deleta um usuátio.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

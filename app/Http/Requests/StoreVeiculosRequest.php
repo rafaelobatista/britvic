@@ -27,7 +27,7 @@ class StoreVeiculosRequest extends FormRequest
         return [
             'modelo' => 'required|min:4',
             'marca' => 'required|min:4',
-            'ano' => 'required|min:4',
+            'ano' => 'required|min:4|max:4',
             'placa' => 'required|min:7',
         ];
     }

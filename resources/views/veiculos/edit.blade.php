@@ -8,6 +8,15 @@
                 <div class="card-header">Editando veículo: {{$veiculo->modelo}} - {{$veiculo->placa}}</div>
 
                 <div class="card-body">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
                     <form action="/veiculos/{{$veiculo->id}}" method="POST">
                         @method('PUT')
