@@ -19,6 +19,10 @@ Route::get('/', function () {
     return redirect('/veiculos');
 });
 
+Route::get('/home', function () {
+    return redirect('/veiculos');
+});
+
 Route::resource('/veiculos', VeiculosController::class)->middleware('auth');
 Route::get('/veiculos/{veiculo}/bookings', [VeiculosController::class, 'bookings']);
 Route::post('/veiculos/{veiculo}/book/{date}', [VeiculosController::class, 'book']);
@@ -27,5 +31,3 @@ Route::post('/veiculos/{veiculo}/cancel-booking/{date}', [VeiculosController::cl
 Route::resource('/usuarios', UsuariosController::class)->middleware('auth');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
